@@ -1,10 +1,11 @@
-from face_rec import encode, recognize
+from modules import encode, recognize
 
 from pathlib import Path
 
-DEFAULT_ENCODINGS_PATH = Path("face_rec/output/encodings.pkl")
+ENCODINGS_PATH = Path("encodings/encodings.pkl")
+TRAIN_PATH = Path("data/train")
 
-encode("hog", DEFAULT_ENCODINGS_PATH)
+encode("hog", ENCODINGS_PATH, TRAIN_PATH)
 
-# for filepath in Path("face_rec/test").glob("*"):
-#     recognize(filepath, "hog", Path("face_rec/output/encodings.pkl"))
+# for filepath in Path("modules/face_rec/test").glob("*"):
+#     recognize(filepath, "hog", Path("modules/face_rec/output/encodings.pkl"))

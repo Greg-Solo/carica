@@ -1,2 +1,6 @@
-face_rec/train*/
-face_rec/test*/
+**/__pycache__
+
+**/train*
+**/test*
+
+encodings/encodings.pkl
