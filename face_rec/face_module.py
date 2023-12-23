@@ -11,6 +11,19 @@ DEFAULT_ENCODINGS_PATH = Path("output/encodings.pkl")
 # Path("test").mkdir(exist_ok=True)
 
 
+# WRAPPERS
+def encode(model: str = "hog", encodings_location: Path = DEFAULT_ENCODINGS_PATH):
+    encode_known_faces(model, encodings_location)
+
+
+def recognize(
+    image_location: str,
+    model: str = "hog",
+    encodings_location: Path = DEFAULT_ENCODINGS_PATH,
+):
+    recognize_faces(image_location, model, encodings_location)
+
+
 def encode_known_faces(
     model: str = "hog", encodings_location: Path = DEFAULT_ENCODINGS_PATH
 ) -> None:
@@ -68,7 +81,3 @@ def _recognize_face(unknown_encoding, loaded_encodings):
     )
     if votes:
         return votes.most_common(1)[0][0]
-
-
-for filepath in Path("test").glob("*"):
-    recognize_faces(filepath)

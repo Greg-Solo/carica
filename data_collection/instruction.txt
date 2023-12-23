@@ -1,0 +1,16 @@
+01) Buka CMD / Terminal
+
+02) Cek versi python pake command ini:
+        python --version
+
+    Kalo gak keluar versi python, install python dulu. Install yang 3.11, jangan yang 3.12.
+    Kalo gak ngerti cara install blg di grup.
+    Kalo dah keluar versi nya, pastiin versinya >= 3.9 dan dibawah 3.12.
+    Lanjut step 03.
+
+02) Masukin command:
+        pip install opencv-python
+
+03) Kalo udah kelar, jalanin file capture.py
+
+04) Kirim folder 'train' dan 'test'
