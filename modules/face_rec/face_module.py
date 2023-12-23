@@ -46,6 +46,7 @@ def encode_known_faces(
             names.append(name)
             encodings.append(encoding)
 
+    Path("encodings").mkdir(exist_ok=True)
     name_encodings = {"names": names, "encodings": encodings}
     with encodings_location.open(mode="wb") as f:
         pickle.dump(name_encodings, f)
